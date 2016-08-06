@@ -1,0 +1,17 @@
+<ul class="posts">
+  <li *ngFor="let post of posts" (click)="onSelect(post)" [class.selected]="post === selectedPost">
+     <span class="badge">{{post.id}}</span>{{post.title}}
+     <button class="delete-button" (click)="deletePost(post, $event)">Delete</button>
+  </li>
+</ul>
+<div *ngIf="addingPost">
+  <my-single-post (close)="close($event)"></my-single-post>
+</div>
+<div *ngIf="selectedPost">
+  <h2>
+    {{selectedPost.title | uppercase}} is my post
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<div class="error" *ngIf="error">{{error}}</div>
+<button (click)="addPost()">Add un nouveau post</button>

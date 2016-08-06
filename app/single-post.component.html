@@ -1,0 +1,6 @@
+<div class="post" *ngIf="post">
+  <h2>{{post.title+' '+post.id}}</h2>
+  <input [(ngModel)]="post.title" placeholder="Titre du post">
+</div>
+<button (click)="goBack()">Back</button>
+<button (click)="save()">Save</button>
