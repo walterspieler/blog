@@ -1,4 +1,9 @@
 {
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "wwwroot"
+  ],
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",

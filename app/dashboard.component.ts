@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
     this.postService.getPosts().then(posts => this.posts = posts.slice(1, 5));
   }
   gotoDetail(post: Post) {
-    let link = ['/detail', post.id];
+    let link = ['/posts', post.id];
     this.router.navigate(link);
   }
 
